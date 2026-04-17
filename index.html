@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HyprYou</title>
+    <meta
+      name="description"
+      content="HyprYou is a Material You-inspired Hyprland setup with auto-generated colors, fluid motion, and configurable desktop tools."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,700;8..144,800&family=Material+Symbols+Rounded:FILL@0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="backdrop backdrop-one"></div>
+    <div class="backdrop backdrop-two"></div>
+
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand-block">
+          <p class="eyebrow">Hyprland Material You</p>
+          <h1>HyprYou</h1>
+          <p class="brand-subtitle">A polished desktop site for a polished desktop project.</p>
+        </div>
+
+        <nav class="tablist" aria-label="Site sections">
+          <button class="tab is-active" type="button" data-tab="overview" aria-selected="true">
+            <span class="material-symbols-rounded">dashboard</span>
+            Overview
+          </button>
+          <button class="tab" type="button" data-tab="downloads" aria-selected="false">
+            <span class="material-symbols-rounded">download</span>
+            Downloads
+          </button>
+          <button class="tab" type="button" data-tab="gallery" aria-selected="false">
+            <span class="material-symbols-rounded">photo_library</span>
+            Screenshots
+          </button>
+        </nav>
+
+        <div class="quick-links" aria-label="Primary project links">
+          <a class="quick-link primary-link" href="https://github.com/koeqaife/hyprland-material-you" target="_blank" rel="noreferrer">
+            <span class="material-symbols-rounded">code</span>
+            View project
+          </a>
+          <a class="quick-link" href="https://github.com/koeqaife/hyprland-material-you/releases" target="_blank" rel="noreferrer">
+            <span class="material-symbols-rounded">deployed_code_update</span>
+            Releases
+          </a>
+          <a class="quick-link" href="https://www.reddit.com/r/unixporn/comments/1mj2p6x/hyprland_hyprland_material_you_v2_hypryou/" target="_blank" rel="noreferrer">
+            <span class="material-symbols-rounded">smart_display</span>
+            Demo video
+          </a>
+          <button class="quick-link" type="button" data-jump-tab="theme">
+            <span class="material-symbols-rounded">palette</span>
+            Theme
+          </button>
+        </div>
+      </header>
+
+      <section class="hero panel-grid">
+        <article class="hero-copy card feature-card">
+          <p class="eyebrow">Dynamic desktop experience</p>
+          <h2>Material 3 Expressive direction for a Hyprland setup that actually feels alive.</h2>
+          <p class="lede">
+            HyprYou packages a full desktop layer around Hyprland with auto-generated color palettes,
+            fluid motion, system tools, settings pages, and a cleaner config workflow than hand-editing everything.
+          </p>
+          <div class="hero-actions">
+            <button class="hero-action hero-action-primary" type="button" data-jump-tab="downloads">
+              <span class="material-symbols-rounded">download</span>
+              Install now
+            </button>
+            <button class="hero-action" type="button" data-jump-tab="gallery">
+              <span class="material-symbols-rounded">photo_library</span>
+              See screenshots
+            </button>
+          </div>
+          <div class="chip-row">
+            <span class="chip"><span class="material-symbols-rounded">imagesearch_roller</span>Auto-generated colors</span>
+            <span class="chip"><span class="material-symbols-rounded">instant_mix</span>Fluid animations</span>
+            <span class="chip"><span class="material-symbols-rounded">tune</span>Settings-first control</span>
+          </div>
+        </article>
+
+        <article class="hero-metrics card spotlight-card">
+          <div class="hero-preview">
+            <img src="assets/hypryou-screenshot.png" alt="HyprYou screenshot preview" />
+          </div>
+          <div class="metric-stack metric-stack-tight">
+            <div class="metric-row">
+              <div class="metric-orb">
+                <span class="material-symbols-rounded">desktop_windows</span>
+              </div>
+              <div>
+                <p class="metric-label">Core idea</p>
+                <p class="metric-value">A polished Material You workspace for Hyprland</p>
+              </div>
+            </div>
+            <div>
+              <p class="metric-label">Packages</p>
+              <p class="metric-value">hypryou, hypryou-utils, hypryou-greeter</p>
+            </div>
+            <div>
+              <p class="metric-label">Install paths</p>
+              <p class="metric-value">AUR helper, release packages, manual build</p>
+            </div>
+            <div>
+              <p class="metric-label">Design basis</p>
+              <p class="metric-value">Official M3 Expressive color, motion, typography, shape, and components guidance</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-shell">
+        <article class="panel is-visible" id="panel-overview" data-panel>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Overview</p>
+              <h3>What HyprYou adds on top of raw Hyprland</h3>
+            </div>
+            <span class="section-icon material-symbols-rounded">deployed_code</span>
+          </div>
+
+          <div class="overview-grid">
+            <article class="card info-card split-card">
+              <div>
+                <h4>Designed around Material You</h4>
+                <p>
+                  HyprYou follows the Material 3 language closely: rounded surfaces, tonal color systems,
+                  large motion-driven components, and UI pieces that feel consistent instead of improvised.
+                </p>
+              </div>
+              <div>
+                <h4>Wallpaper-aware color generation</h4>
+                <p>
+                  Colors can be generated from wallpaper or settings, then applied across apps and interface layers,
+                  which is the main reason the desktop feels cohesive instead of theme-stacked.
+                </p>
+              </div>
+            </article>
+
+            <article class="card info-card">
+              <h4>Why people use it</h4>
+              <ul class="feature-list">
+                <li>Large parts of the setup are controlled from settings instead of scattered config edits.</li>
+                <li>Optional package layers let you add dialogs and greeter support when you need them.</li>
+                <li>It keeps a cleaner home-directory footprint than many hand-rolled dotfile setups.</li>
+              </ul>
+            </article>
+
+            <article class="card info-card banner-card">
+              <div>
+                <p class="eyebrow">Session detail</p>
+                <h4>HyprYou can run as its own desktop session.</h4>
+                <p>
+                  If you launch it from a display manager, use the HyprYou session rather than plain Hyprland.
+                  Custom variables and overrides live in <code>~/.config/hypryou/hyprland.conf</code>.
+                </p>
+              </div>
+              <span class="material-symbols-rounded">view_carousel</span>
+            </article>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-downloads" data-panel hidden>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Downloads</p>
+              <h3>Three ways to install HyprYou on Arch</h3>
+            </div>
+            <span class="section-icon material-symbols-rounded">install_desktop</span>
+          </div>
+
+          <div class="downloads-grid">
+            <article class="card install-card accent-card">
+              <div class="install-head">
+                <span class="material-symbols-rounded">auto_awesome</span>
+                <div>
+                  <h4>Method 1: AUR helper</h4>
+                  <p>The fastest route if you already use yay, paru, or another AUR helper.</p>
+                </div>
+              </div>
+              <pre><code>yay -Ss hypryou
+paru -Ss hypryou
+
+yay -S hypryou-git
+paru -S hypryou-git
+# optional
+# yay -S hypryou-utils
+# yay -S hypryou-greeter
+# paru -S hypryou-utils
+# paru -S hypryou-greeter</code></pre>
+              <p class="supporting-copy">
+                Install the main package first. Add <code>hypryou-utils</code> for GTK-based dialogs and
+                <code>hypryou-greeter</code> if you want greetd integration.
+              </p>
+            </article>
+
+            <article class="card install-card">
+              <div class="install-head">
+                <span class="material-symbols-rounded">archive</span>
+                <div>
+                  <h4>Method 2: Release packages</h4>
+                  <p>Best when you want pre-built packages without building from source.</p>
+                </div>
+              </div>
+              <pre><code>cd &lt;folder-with-.pkg.tar.zst&gt;
+sudo pacman -U hypryou-*.pkg.tar.zst
+# optional
+sudo pacman -U hypryou-utils-*.pkg.tar.zst
+sudo pacman -U hypryou-greeter-*.pkg.tar.zst</code></pre>
+              <p class="supporting-copy">
+                Download the packages from the GitHub releases page first, then run the commands from the folder where those package files actually live.
+              </p>
+            </article>
+
+            <article class="card install-card">
+              <div class="install-head">
+                <span class="material-symbols-rounded">terminal</span>
+                <div>
+                  <h4>Method 3: Manual build</h4>
+                  <p>Use this when you want full control over dependencies and install paths.</p>
+                </div>
+              </div>
+              <pre><code>git clone --depth=1 https://github.com/koeqaife/hyprland-material-you.git
+cd hyprland-material-you
+# install dependencies listed in depends.txt
+cd hypryou && ./build.sh
+cd ../build && ./build.sh
+
+# copy runtime files
+sudo cp -r ../hypryou /usr/lib/hypryou
+sudo cp -r ../hypryou-assets /usr/share/hypryou
+sudo cp hypryouctl hypryou-start hypryou-crash-dialog /usr/bin/
+sudo cp ../assets/hypryou.desktop /usr/share/wayland-sessions/</code></pre>
+              <p class="supporting-copy">
+                Optional packages can be built with <code>makepkg -si</code> inside <code>hypryou-utils/</code> and <code>greeter/</code>.
+              </p>
+            </article>
+          </div>
+
+          <article class="card callout-card">
+            <span class="material-symbols-rounded">info</span>
+            <p>
+              If dependency resolution fails, install the missing packages from AUR first. If Hyprland reports a config issue after install,
+              try <code>hyprctl reload</code> before assuming the setup is broken.
+            </p>
+          </article>
+        </article>
+
+        <article class="panel" id="panel-gallery" data-panel hidden>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Screenshots</p>
+              <h3>Preview the desktop experience before you install</h3>
+            </div>
+            <span class="section-icon material-symbols-rounded">imagesmode</span>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="card shot-card shot-wide">
+              <img class="shot-image" src="assets/hypryou-screenshot.png" alt="Full HyprYou desktop screenshot" data-full-src="assets/hypryou-screenshot.png" />
+              <figcaption>A full desktop scene showing the visual rhythm, spacing, and color story users get by default.</figcaption>
+              <button class="inspect-button" type="button" data-inspect-src="assets/hypryou-screenshot.png" data-inspect-label="Full desktop preview">
+                <span class="material-symbols-rounded">zoom_in</span>
+                Inspect
+              </button>
+            </figure>
+
+            <figure class="card shot-card shot-crop shot-crop-left">
+              <img class="shot-image shot-focus-left" src="assets/hypryou-screenshot.png" alt="Close-up of HyprYou left side panels" data-full-src="assets/hypryou-screenshot.png" />
+              <figcaption>Left-side close-up: controls and cards are clear and readable for day-to-day use.</figcaption>
+              <button class="inspect-button" type="button" data-inspect-src="assets/hypryou-screenshot.png" data-inspect-label="Left-side preview">
+                <span class="material-symbols-rounded">zoom_in</span>
+                Inspect
+              </button>
+            </figure>
+
+            <figure class="card shot-card shot-crop shot-crop-right">
+              <img class="shot-image shot-focus-right" src="assets/hypryou-screenshot.png" alt="Close-up of HyprYou right side panels" data-full-src="assets/hypryou-screenshot.png" />
+              <figcaption>Right-side close-up: panel hierarchy and emphasis are tuned for quick scanning.</figcaption>
+              <button class="inspect-button" type="button" data-inspect-src="assets/hypryou-screenshot.png" data-inspect-label="Right-side preview">
+                <span class="material-symbols-rounded">zoom_in</span>
+                Inspect
+              </button>
+            </figure>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-theme" data-panel hidden>
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Theme</p>
+              <h3>Use your browser accent when available, or switch the seed color here</h3>
+            </div>
+            <span class="section-icon material-symbols-rounded">gesture_select</span>
+          </div>
+
+          <div class="theme-grid">
+            <article class="card theme-control-card">
+              <h4>Seed color</h4>
+              <div class="swatch-row" role="list" aria-label="Theme choices">
+                <button class="swatch is-selected" type="button" data-theme-mode="browser" data-seed="browser" style="--swatch:#7ab27f;">
+                  Browser
+                </button>
+                <button class="swatch" type="button" data-theme-mode="custom" data-seed="#6f9d6d" style="--swatch:#6f9d6d;">
+                  Moss
+                </button>
+                <button class="swatch" type="button" data-theme-mode="custom" data-seed="#cf7f52" style="--swatch:#cf7f52;">
+                  Clay
+                </button>
+                <button class="swatch" type="button" data-theme-mode="custom" data-seed="#4c90b8" style="--swatch:#4c90b8;">
+                  Lake
+                </button>
+                <button class="swatch" type="button" data-theme-mode="custom" data-seed="#8f7898" style="--swatch:#8f7898;">
+                  Alloy
+                </button>
+              </div>
+
+              <label class="theme-label" for="theme-color">Custom hex</label>
+              <div class="field-row">
+                <input id="theme-color" name="theme-color" type="color" value="#6f9d6d" />
+                <button class="tonal-button" type="button" id="apply-custom-theme">Apply custom color</button>
+              </div>
+
+              <div class="segmented" role="group" aria-label="Brightness mode">
+                <button class="mode-toggle is-active" type="button" data-brightness="light">Light</button>
+                <button class="mode-toggle" type="button" data-brightness="dark">Dark</button>
+              </div>
+            </article>
+
+            <article class="card theme-preview-card">
+              <p class="eyebrow">Live preview</p>
+              <h4>Expressive surfaces</h4>
+              <p class="supporting-copy">
+                This theme system follows the official M3 Expressive guidance: richer type emphasis, stronger surface hierarchy,
+                varied container tones, and color derived from a single seed.
+              </p>
+              <div class="preview-stack">
+                <div class="preview-surface preview-primary">
+                  <span class="material-symbols-rounded">view_in_ar</span>
+                  Primary
+                </div>
+                <div class="preview-surface preview-secondary">
+                  <span class="material-symbols-rounded">widgets</span>
+                  Secondary container
+                </div>
+                <div class="preview-surface preview-tertiary">
+                  <span class="material-symbols-rounded">layers</span>
+                  Tertiary container
+                </div>
+              </div>
+            </article>
+          </div>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <p class="disclaimer">NOT MADE BY HYPRYOU DEVELOPERS</p>
+        <div class="footer-links">
+          <a href="https://github.com/koeqaife/hyprland-material-you" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://github.com/koeqaife/hyprland-material-you/releases" target="_blank" rel="noreferrer">Releases</a>
+          <a href="https://m3.material.io/" target="_blank" rel="noreferrer">Material 3</a>
+        </div>
+      </footer>
+    </main>
+
+    <div class="theme-probe" aria-hidden="true"></div>
+
+    <dialog class="lightbox" id="shot-lightbox" aria-label="Screenshot inspector">
+      <form method="dialog" class="lightbox-backdrop">
+        <button class="lightbox-close" value="close" aria-label="Close screenshot inspector">
+          <span class="material-symbols-rounded">close</span>
+        </button>
+      </form>
+      <div class="lightbox-content">
+        <div class="lightbox-media">
+          <img id="lightbox-image" src="" alt="Screenshot preview" />
+        </div>
+        <p id="lightbox-caption"></p>
+        <div class="lightbox-actions">
+          <button type="button" class="lightbox-button" id="lightbox-close-inline">
+            <span class="material-symbols-rounded">close</span>
+            Close
+          </button>
+          <button type="button" class="lightbox-button" id="lightbox-zoom-out">
+            <span class="material-symbols-rounded">zoom_out</span>
+            Zoom out
+          </button>
+          <button type="button" class="lightbox-button" id="lightbox-zoom-in">
+            <span class="material-symbols-rounded">zoom_in</span>
+            Zoom in
+          </button>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
