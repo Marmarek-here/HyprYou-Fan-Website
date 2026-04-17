@@ -3,4 +3,4 @@ This is a website meant to look and feel as if it was made for HyprYou (https://
 
 
 
-- NOT made for it by the creator. ALL changes to the HyprYou is made by Koeqaife.
+- NOT made for it by the creator. ALL changes to HyprYou are made by Koeqaife.
